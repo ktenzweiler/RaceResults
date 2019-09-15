@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- A transition describes an animation via start and end state -->
+    <Transition
+        app:constraintSetEnd="@+id/end"
+        app:constraintSetStart="@+id/start">
+        <!-- MotionLayout will track swipes relative to this view -->
+        <OnSwipe app:touchAnchorId="@id/gold_trophy" />
+    </Transition>
+
+    <!-- Constraints to apply at the start of the animation -->
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/gold_trophy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@+id/gold_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/gold_trophy"
+            app:layout_constraintTop_toBottomOf="@id/gold_trophy" />
+
+        <Constraint
+            android:id="@+id/gold_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/gold_trophy"
+            app:layout_constraintTop_toBottomOf="@id/gold_name" />
+
+        <Constraint
+            android:id="@+id/gold_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/gold_trophy"
+            app:layout_constraintTop_toBottomOf="@id/gold_time" />
+
+        <Constraint
+            android:id="@+id/gold_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/gold_trophy"
+            app:layout_constraintTop_toBottomOf="@id/gold_age" />
+
+        <Constraint
+            android:id="@+id/silver_trophy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@+id/silver_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/silver_trophy"
+            app:layout_constraintTop_toBottomOf="@id/silver_trophy" />
+
+        <Constraint
+            android:id="@+id/silver_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/silver_trophy"
+            app:layout_constraintTop_toBottomOf="@id/silver_name" />
+
+        <Constraint
+            android:id="@+id/silver_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/silver_trophy"
+            app:layout_constraintTop_toBottomOf="@id/silver_time" />
+
+        <Constraint
+            android:id="@+id/silver_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/silver_trophy"
+            app:layout_constraintTop_toBottomOf="@id/silver_age" />
+
+        <Constraint
+            android:id="@+id/bronze_trophy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@+id/bronze_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/bronze_trophy"
+            app:layout_constraintTop_toBottomOf="@id/bronze_trophy" />
+
+        <Constraint
+            android:id="@+id/bronze_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/bronze_trophy"
+            app:layout_constraintTop_toBottomOf="@id/bronze_name" />
+
+        <Constraint
+            android:id="@+id/bronze_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/bronze_trophy"
+            app:layout_constraintTop_toBottomOf="@id/bronze_time" />
+
+        <Constraint
+            android:id="@+id/bronze_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/bronze_trophy"
+            app:layout_constraintTop_toBottomOf="@id/bronze_age" />
+
+        <Constraint
+            android:id="@+id/non_podium_runners_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:alpha="0"
+            app:layout_constraintTop_toBottomOf="@id/gold_rank" />
+
+        <Constraint
+            android:id="@+id/non_podium_runners"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:alpha="0"
+            app:layout_constraintEnd_toEndOf="@id/non_podium_runners_header"
+            app:layout_constraintStart_toStartOf="@id/non_podium_runners_header"
+            app:layout_constraintTop_toBottomOf="@id/non_podium_runners_header" />
+    </ConstraintSet>
+
+    <!-- Constraints to apply at the end of the animation -->
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@+id/silver_trophy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:alpha="1.0"
+            app:layout_constraintEnd_toStartOf="@id/gold_trophy"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/silver_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/silver_trophy"
+            app:layout_constraintStart_toStartOf="@id/silver_trophy"
+            app:layout_constraintTop_toBottomOf="@id/silver_trophy" />
+
+        <Constraint
+            android:id="@+id/silver_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/silver_trophy"
+            app:layout_constraintStart_toStartOf="@id/silver_trophy"
+            app:layout_constraintTop_toBottomOf="@id/silver_name" />
+
+        <Constraint
+            android:id="@+id/silver_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/silver_trophy"
+            app:layout_constraintStart_toStartOf="@id/silver_trophy"
+            app:layout_constraintTop_toBottomOf="@id/silver_time" />
+
+        <Constraint
+            android:id="@+id/silver_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/silver_trophy"
+            app:layout_constraintStart_toStartOf="@id/silver_trophy"
+            app:layout_constraintTop_toBottomOf="@id/silver_age" />
+
+
+        <Constraint
+            android:id="@+id/gold_trophy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="70dp"
+            app:layout_constraintEnd_toStartOf="@id/bronze_trophy"
+            app:layout_constraintStart_toEndOf="@id/silver_trophy"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/gold_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/gold_trophy"
+            app:layout_constraintStart_toStartOf="@id/gold_trophy"
+            app:layout_constraintTop_toBottomOf="@id/gold_trophy" />
+
+        <Constraint
+            android:id="@+id/gold_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/gold_trophy"
+            app:layout_constraintStart_toStartOf="@id/gold_trophy"
+            app:layout_constraintTop_toBottomOf="@id/gold_name" />
+
+        <Constraint
+            android:id="@+id/gold_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/gold_trophy"
+            app:layout_constraintStart_toStartOf="@id/gold_trophy"
+            app:layout_constraintTop_toBottomOf="@id/gold_time" />
+
+        <Constraint
+            android:id="@+id/gold_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/gold_trophy"
+            app:layout_constraintStart_toStartOf="@id/gold_trophy"
+            app:layout_constraintTop_toBottomOf="@id/gold_age" />
+
+        <Constraint
+            android:id="@+id/bronze_trophy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:alpha="1.0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/gold_trophy"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/bronze_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="@id/bronze_trophy"
+            app:layout_constraintStart_toStartOf="@id/bronze_trophy"
+            app:layout_constraintTop_toBottomOf="@id/bronze_trophy" />
+
+        <Constraint
+            android:id="@+id/bronze_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/bronze_trophy"
+            app:layout_constraintStart_toStartOf="@id/bronze_trophy"
+            app:layout_constraintTop_toBottomOf="@id/bronze_name" />
+
+        <Constraint
+            android:id="@+id/bronze_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/bronze_trophy"
+            app:layout_constraintStart_toStartOf="@id/bronze_trophy"
+            app:layout_constraintTop_toBottomOf="@id/bronze_time" />
+
+        <Constraint
+            android:id="@+id/bronze_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/bronze_trophy"
+            app:layout_constraintStart_toStartOf="@id/bronze_trophy"
+            app:layout_constraintTop_toBottomOf="@id/bronze_age" />
+
+        <Constraint
+            android:id="@+id/non_podium_runners_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:alpha=".8"
+            app:layout_constraintTop_toBottomOf="@id/gold_rank" />
+
+        <Constraint
+            android:id="@+id/non_podium_runners"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:alpha=".8"
+            app:layout_constraintEnd_toEndOf="@id/non_podium_runners_header"
+            app:layout_constraintStart_toStartOf="@id/non_podium_runners_header"
+            app:layout_constraintTop_toBottomOf="@id/non_podium_runners_header" />
+    </ConstraintSet>
+</MotionScene>

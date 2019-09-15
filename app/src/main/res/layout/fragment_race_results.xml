@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.kodingwithkyle.raceresults.ui.raceresults.RaceResultsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        app:layoutDescription="@xml/race_results_transition">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/racing_banner" />
+
+        <ImageView
+            android:id="@+id/silver_trophy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/trophy"
+            android:tint="#c0c0c0"
+            app:srcCompat="@drawable/trophy" />
+
+        <TextView
+            android:id="@+id/silver_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{viewModel.silverName}"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/silver_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{viewModel.silverTime}"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/silver_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{viewModel.silverAge}"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/silver_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/second"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/bronze_trophy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/trophy"
+            android:tint="#cd7f32"
+            app:srcCompat="@drawable/trophy" />
+
+        <TextView
+            android:id="@+id/bronze_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{viewModel.bronzeName}"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/bronze_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{viewModel.bronzeTime}"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/bronze_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{viewModel.bronzeAge}"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/bronze_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/third"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/gold_trophy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/trophy"
+            android:tint="#ffd700"
+            app:srcCompat="@drawable/trophy" />
+
+        <TextView
+            android:id="@+id/gold_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{viewModel.goldName}"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/gold_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{viewModel.goldTime}"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/gold_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{viewModel.goldAge}"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/gold_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/first"
+            android:textColor="@android:color/white" />
+
+        <include layout="@layout/non_podium_header" />
+
+        <ListView
+            android:id="@+id/non_podium_runners"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white" />
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</layout>

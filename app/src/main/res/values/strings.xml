@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Race Results</string>
+
+    <string name="tab_text_1">0 – 15 years</string>
+    <string name="tab_text_2">16 – 29 years</string>
+    <string name="tab_text_3">30+ years</string>
+    <string name="trophy">trophy</string>
+    <string name="third">3rd</string>
+    <string name="first">1st</string>
+    <string name="second">2nd</string>
+</resources>
